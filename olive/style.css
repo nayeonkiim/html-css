@@ -1,0 +1,85 @@
+.container {
+  font-family: "Montserrat", -apple-system, "Noto Sans KR", "AppleSDGothicNeo",
+    "Roboto", "montserratlight", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.inner {
+  width: 1150px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.header_top {
+  position: relative;
+}
+
+.header_top .menu-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.header_top .menu-top > li {
+  float: left;
+  padding: 0 9px 0 10px;
+  line-height: 30px;
+}
+.header_top .menu-top a {
+  text-decoration: none;
+  color: #000;
+  padding-right: 15px;
+  font-size: 13px;
+}
+
+.header_bottom {
+  height: 90px;
+}
+
+.header_bottom .logo {
+  float: left;
+  margin-top: 45px;
+}
+
+.header_bottom .logo img {
+  width: 300px;
+  height: 80px;
+}
+
+.header_bottom .search .text__search {
+  float: left;
+  width: 340px;
+  height: 40px;
+  margin: 65px 0 0 90px;
+  border: 2px solid #9bce26;
+  border-radius: 20px;
+}
+
+.header_bottom .plus_menu {
+  position: relative;
+}
+.header_bottom .plus_menu .plus {
+  position: absolute;
+  margin: 75px 0 0 50px;
+  right: 0;
+}
+
+.header_bottom .plus_menu .plus li {
+  float: left;
+  padding: 0 20px 0 10px;
+}
+
+.header_bottom .plus_menu .plus a {
+  color: #000;
+  text-decoration: none;
+}
+
