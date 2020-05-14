@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
 .container {
   font-family: "Montserrat", -apple-system, "Noto Sans KR", "AppleSDGothicNeo",
     "Roboto", "montserratlight", sans-serif;
@@ -9,8 +19,12 @@ ul li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .inner {
-  width: 1150px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -18,6 +32,12 @@ ul li {
   content: "";
   clear: both;
   display: block;
+}
+
+header {
+  height: 120px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dddddd;
 }
 
 .header_top {
@@ -29,15 +49,16 @@ ul li {
   top: 0;
   right: 0;
 }
-.header_top .menu-top > li {
+
+.header_top .menu-top>li {
   float: left;
   padding: 0 9px 0 10px;
   line-height: 30px;
 }
+
 .header_top .menu-top a {
   text-decoration: none;
   color: #000;
-  padding-right: 15px;
   font-size: 13px;
 }
 
@@ -51,11 +72,13 @@ ul li {
 }
 
 .header_bottom .logo img {
-  width: 300px;
-  height: 80px;
+  margin-top: 20px;
+  width: 248px;
+  height: 42px;
 }
 
-.header_bottom .search .text__search {
+.header_bottom .search {
+  position: relative;
   float: left;
   width: 340px;
   height: 40px;
@@ -64,13 +87,39 @@ ul li {
   border-radius: 20px;
 }
 
+.header_bottom .search a {
+  position: absolute;
+  top: 50%;
+  margin-left: 300px;
+  margin-top: -8px;
+  text-decoration: none;
+  color: #4f5b66;
+}
+
+.header_bottom .search .text__search {
+  width: 90%;
+  height: 20px;
+  border: 0;
+  margin: 3px 0 0 20px;
+  padding: 8px 0px 8px 0;
+  font-family: "dotum", "돋움";
+  font-size: 16px;
+  outline: 0;
+}
+
 .header_bottom .plus_menu {
   position: relative;
 }
+
 .header_bottom .plus_menu .plus {
   position: absolute;
   margin: 75px 0 0 50px;
   right: 0;
+}
+
+.header_bottom .plus .add_border {
+  padding-right: 30px;
+  border-right: 1px solid #4f5b66;
 }
 
 .header_bottom .plus_menu .plus li {
@@ -83,3 +132,206 @@ ul li {
   text-decoration: none;
 }
 
+.section--feature1 {
+  border-bottom: 2px solid #4f5b66;
+}
+
+.section--feature1 .main_feature {
+  position: relative;
+  height: 47px;
+}
+
+.section--feature1 .main_feature .main_list {
+  float: left;
+  width: 170px;
+  height: 44px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 44px;
+  vertical-align: middle;
+}
+
+.section--feature1 .main_feature .main_list a {
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.section--feature1 .main-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.section--feature1 .main-menu>li {
+  float: left;
+  margin-top: 10px;
+  margin-left: 37px;
+}
+
+.section--feature1 .main-menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+
+.main_cate_wrap {
+  position: absolute;
+  top: 46px;
+  left: 50%;
+  /* %개념 잘 모르겠음 */
+  height: 450px;
+  /* margin-left: -510px , - 개념 공부 */
+  margin-left: -575px;
+  background: rgba(51, 51, 51, 0.5);
+  z-index: 10;
+  /* z-index 개념 공부하기  */
+}
+
+.main_cate_wrap .main_cate_list {
+  width: 170px;
+  box-sizing: border-box;
+}
+
+/* :first-of-type 개념 공부 */
+.main_cate_wrap .main_cate_list>li:first-of-type {
+  margin-top: 15px;
+}
+
+.main_cate_wrap .main_cate_list .sub_cate_list {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 169px;
+  width: 170px;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #2f3030;
+  padding: 15px 0;
+  box-sizing: border-box;
+}
+
+.main_cate_wrap .main_cate_list li:hover>.sub_cate_list {
+  display: block;
+}
+
+.main_cate_wrap .main_cate_list>li .main_menu {
+  height: 30px;
+  line-height: 30px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.main_cate_wrap .main_cate_list .sub_cate_list>li {
+  padding-left: 12px;
+}
+
+.main_cate_wrap .main_cate_list .sub_cate_list>li .sub_menu {
+  display: block;
+  height: 30px;
+  padding-left: 12px;
+  line-height: 30px;
+  font-size: 13px;
+  color: #555;
+  font-weight: 700;
+}
+
+#slide {
+  height: 450px;
+  position: relative;
+}
+
+#slide ul {
+  width: 400%;
+  height: 100%;
+  transition: 1s;
+}
+
+#slide ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#slide li {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+
+#slide li:nth-child(1) {
+  background: #faa;
+}
+
+#slide li:nth-child(2) {
+  background: #ffa;
+}
+
+#slide li:nth-child(3) {
+  background: #faf;
+}
+
+#slide li:nth-child(4) {
+  background: #aaf;
+}
+
+#slide input {
+  display: none;
+}
+
+#slide .pos {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#slide label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #666;
+  background: #fff;
+  transition: 0.3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#pos1:checked~ul {
+  margin-left: 0%;
+}
+
+#pos2:checked~ul {
+  margin-left: -100%;
+}
+
+#pos3:checked~ul {
+  margin-left: -200%;
+}
+
+#pos4:checked~ul {
+  margin-left: -300%;
+}
+
+#pos1:checked~.pos>label:nth-child(1) {
+  background: #666;
+}
+
+#pos2:checked~.pos>label:nth-child(2) {
+  background: #666;
+}
+
+#pos3:checked~.pos>label:nth-child(3) {
+  background: #666;
+}
+
+#pos4:checked~.pos>label:nth-child(4) {
+  background: #666;
+}
